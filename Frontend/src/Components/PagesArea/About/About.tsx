@@ -27,11 +27,11 @@ function Section({ index, title, children }: SectionProps) {
 
 // The technologies behind the project.
 const stack = [
-  "React + TypeScript single-page app, built with Vite",
-  "Tailwind CSS for a warm, editorial interface",
-  "Python FastAPI REST API with a layered architecture",
-  "MySQL database accessed through SQLAlchemy",
-  "OpenAI API, called only from the server side",
+  "React + TypeScript + Vite",
+  "Tailwind CSS",
+  "Python FastAPI REST API",
+  "MySQL database",
+  "OpenAI API",
 ];
 
 export function About() {
@@ -60,15 +60,15 @@ export function About() {
         <div className="mt-10">
           <Section index="01" title="The System">
             <p>
-              Converse is a conversational AI assistant. You type a message, and the
-              assistant replies in context &mdash; the whole conversation is kept on
+              Converse is a conversational AI Chatbot. You type a message, and it
+              replies in context. The whole conversation is kept on
               screen, and every reply takes the earlier messages into account.
             </p>
             <p>
               Each conversation and every message is stored in a MySQL database, with
               a role recorded on each message so it is always clear whether the person
-              or the assistant said it. The request to OpenAI is made entirely on the
-              server, so the API key never reaches the browser.
+              or the chatbot said it. The request to OpenAI is made entirely on the
+              server side, so the API key never reaches the browser.
             </p>
             <ul className="mt-4 space-y-1.5">
               {stack.map((item) => (
@@ -83,14 +83,13 @@ export function About() {
           <Section index="02" title="The Programmer">
             <p>
               Built by <span className="font-medium text-ink">Ahmad Abd El Qadir</span>,
-              a full-stack developer, as the final project of the John Bryce Full Stack
+              a fullstack developer, as the Fourth project of the John Bryce Full Stack
               Web Developer course.
             </p>
             <p>
-              The project brings together the topics studied through the course:
-              Python, object-oriented design, MySQL, a REST API, a React client, and
-              an integration with generative AI &mdash; assembled into one small,
-              carefully made product.
+              The project combines : 
+              Python, OOP, MySQL, REST API, React, and
+              an integration with generative AI.
             </p>
           </Section>
         </div>
