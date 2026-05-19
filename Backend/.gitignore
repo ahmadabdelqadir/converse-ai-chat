@@ -1,0 +1,12 @@
+# Environment file with secrets - never commit this.
+.env
+
+# Python cache and build artifacts.
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment.
+venv/
+.venv/
+env/

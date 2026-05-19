@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm paper palette - the Converse editorial aesthetic. */
+    --paper: #f4f1ea;
+    --paper-2: #ece7da;
+    --surface: #fbfaf6;
+    --ink: #211e1a;
+    --ink-soft: #6b6457;
+    --ink-faint: #9a9384;
+    --clay: #be4a2e;
+    --clay-deep: #9e3c24;
+    --border: #e3ddcf;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: "Hanken Grotesk", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* A faint paper grain laid over the whole app for warmth and depth. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.4;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  }
+
+  ::selection {
+    background: var(--clay);
+    color: var(--paper);
+  }
+}
+
+@layer utilities {
+  /* Slim, warm scrollbar for the message stream. */
+  .stream-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  .stream-scroll::-webkit-scrollbar {
+    width: 10px;
+  }
+  .stream-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+    border-radius: 999px;
+    border: 3px solid var(--paper);
+  }
+  .stream-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
