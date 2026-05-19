@@ -6,7 +6,7 @@ a MySQL database, and the OpenAI request is made only on the server side.
 
 ## Repository
 
-https://github.com/ahmadabdelqadir/converse
+https://github.com/ahmadabdelqadir/converse-ai-chat
 
 ## Stack
 
