@@ -1,7 +1,7 @@
 import axios, { type AxiosInstance } from "axios";
 import { appConfig } from "../Utils/AppConfig";
 
-// Thin wrapper around a single axios instance for all REST API calls.
+// One axios instance, shared by every call to the REST API.
 class HttpService {
   private readonly client: AxiosInstance;
 

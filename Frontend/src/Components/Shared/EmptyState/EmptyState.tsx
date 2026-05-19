@@ -13,7 +13,7 @@ const suggestions = [
   "Summarise a book or film I name for you",
 ];
 
-// The welcome screen shown when a conversation has no messages yet.
+// Welcome screen shown before the first message is sent.
 export function EmptyState({ onPick }: EmptyStateProps) {
   return (
     <motion.div

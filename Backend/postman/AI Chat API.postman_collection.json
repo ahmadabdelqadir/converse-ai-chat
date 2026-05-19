@@ -1,8 +1,11 @@
 {
   "info": {
+    "_postman_id": "49858aa1-aa5f-4cef-85d9-0a05731c10b4",
     "name": "AI Chat API",
-    "description": "REST API for the AI Chat App. Run 'Create Conversation' first, then use the returned id in the other requests.",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    "description": "REST API for the AI Chat App (Converse)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51857188",
+    "_collection_link": "https://go.postman.co/collection/51857188-49858aa1-aa5f-4cef-85d9-0a05731c10b4?source=collection_link"
   },
   "item": [
     {

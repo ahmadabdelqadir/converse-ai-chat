@@ -5,8 +5,7 @@ interface LogoProps {
   markOnly?: boolean;
 }
 
-// The Converse wordmark: a two-message conversation mark next to the name.
-// The two offset bars echo the chat layout - one voice, then the other.
+// The Converse logo: the two-bar mark, with the wordmark unless markOnly is set.
 export function Logo({ className, markOnly = false }: LogoProps) {
   return (
     <span className={cn("inline-flex items-center gap-2.5", className)}>

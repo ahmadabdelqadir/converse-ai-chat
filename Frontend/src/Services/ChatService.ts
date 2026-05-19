@@ -17,7 +17,7 @@ interface RawMessage {
   created_at: string;
 }
 
-// Talks to the chat REST API and maps the responses to frontend models.
+// Calls the chat API and converts the backend responses into frontend models.
 class ChatService {
   // Start a new, empty conversation.
   public async createConversation(): Promise<Conversation> {
@@ -42,7 +42,7 @@ class ChatService {
     return raw.map((message) => this.toMessage(message));
   }
 
-  // Map a backend message into the frontend Message model.
+  // Convert one backend message into a frontend Message.
   private toMessage(raw: RawMessage): Message {
     const role: MessageRole = raw.role === "assistant" ? "assistant" : "user";
     return {
