@@ -6,7 +6,6 @@ import { httpService } from "./HttpService";
 // Raw shapes returned by the backend (snake_case keys).
 interface RawConversation {
   id: number;
-  title: string | null;
   created_at: string;
 }
 
@@ -23,7 +22,7 @@ class ChatService {
   // Start a new, empty conversation.
   public async createConversation(): Promise<Conversation> {
     const raw = await httpService.post<RawConversation>(appConfig.conversationsUrl);
-    return { id: raw.id, title: raw.title, createdAt: raw.created_at };
+    return { id: raw.id, createdAt: raw.created_at };
   }
 
   // Send a user message and get back the assistant's reply.

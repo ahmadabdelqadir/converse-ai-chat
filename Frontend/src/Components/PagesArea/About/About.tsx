@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Logo } from "@/Components/Shared/Logo/Logo";
 import { useTitle } from "@/Hooks/useTitle";
 
-// One labelled section of the about page.
+
 interface SectionProps {
   index: string;
   title: string;
@@ -25,7 +25,7 @@ function Section({ index, title, children }: SectionProps) {
   );
 }
 
-// The technologies behind the project.
+
 const stack = [
   "React + TypeScript + Vite",
   "Tailwind CSS",
